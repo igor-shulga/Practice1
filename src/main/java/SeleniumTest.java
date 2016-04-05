@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SeleniumTest extends TestCase {
@@ -29,8 +30,8 @@ public class SeleniumTest extends TestCase {
         System.out.println(googleSearch.getLocation());
         System.out.println(driver.getTitle());
 
-     //   WebDriverWait wait = new WebDriverWait(driver,15);
-       // wait.until(ExpectedCondition);
+        WebDriverWait wait = new WebDriverWait(driver,15);
+        wait.until(ExpectedConditions.titleContains("Selenium IDE"));
 
 
         assertTrue("Wrong message", driver.getTitle().contains("Selenium IDE"));
