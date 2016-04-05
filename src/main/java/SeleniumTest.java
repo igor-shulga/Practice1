@@ -22,6 +22,7 @@ public class SeleniumTest extends TestCase {
        WebElement googleSearch = driver.findElement(input);
         googleSearch.sendKeys("Selenium IDE \n");
         Thread.sleep(2000);
+        //ssa
     }
 
     @AfterClass
