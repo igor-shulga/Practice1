@@ -21,8 +21,13 @@ public class SeleniumTest extends TestCase {
 
        WebElement googleSearch = driver.findElement(input);
         googleSearch.sendKeys("Selenium IDE \n");
+        System.out.println(googleSearch.getLocation());
+        System.out.println(driver.getTitle());
+
+        assertTrue("Wrong message",driver.getTitle().contains("Google"));
+
         Thread.sleep(2000);
-        //ssa
+
     }
 
     @AfterClass
